@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Términos de servicio de Calafi. Condiciones de uso de la extensión para evaluar tareas en Google Docs.">
+  <title>Términos de servicio – Calafi</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #3B82F6;
+      --blue-light: #EFF6FF;
+      --text: #0F172A;
+      --muted: #64748B;
+      --border: #E2E8F0;
+      --bg: #FFFFFF;
+      --bg-alt: #F8FAFC;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 64px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    .nav-brand img {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a.active { color: var(--text); }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      padding: 3.5rem 2rem 3rem;
+    }
+
+    .page-header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.85rem;
+    }
+
+    .page-header h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-header .meta {
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    /* ── CONTENT ── */
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 5rem;
+    }
+
+    .content section {
+      margin-bottom: 3rem;
+    }
+
+    .content h2 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .content p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 0.75rem;
+    }
+
+    .content p:last-child { margin-bottom: 0; }
+
+    .content ul {
+      list-style: none;
+      margin: 0.5rem 0 0.75rem;
+    }
+
+    .content ul li {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      padding-left: 1.25rem;
+      position: relative;
+      margin-bottom: 0.25rem;
+    }
+
+    .content ul li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-weight: 600;
+    }
+
+    .content a {
+      color: var(--blue);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    .content a:hover { border-color: var(--blue); }
+
+    .content strong { color: var(--text); font-weight: 600; }
+
+    .warning-box {
+      background: #FFFBEB;
+      border-left: 3px solid #F59E0B;
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+    }
+
+    .warning-box p {
+      color: #92400E;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .info-box {
+      background: var(--blue-light);
+      border-left: 3px solid var(--blue);
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+    }
+
+    .info-box p {
+      color: #1E40AF;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    footer p { color: var(--muted); font-size: 0.83rem; }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.83rem;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      nav { padding: 0 1rem; }
+      .nav-links { gap: 1.25rem; }
+      .nav-links li:nth-child(1),
+      .nav-links li:nth-child(2) { display: none; }
+      .page-header { padding: 2.5rem 1.5rem 2rem; }
+      .page-header h1 { font-size: 1.75rem; }
+      .content { padding: 2.5rem 1.5rem 4rem; }
+      footer { justify-content: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-brand" aria-label="Calafi inicio">
+    <img src="calafi logo horizontal.jpg" alt="Calafi">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="index.html#contacto">Contacto</a></li>
+    <li><a href="privacidad.html">Privacidad</a></li>
+    <li><a href="terminos.html" class="active">Términos</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="page-header-inner">
+    <span class="section-label">Legal</span>
+    <h1>Términos de servicio</h1>
+    <p class="meta">Última actualización: abril de 2026</p>
+  </div>
+</header>
+
+<!-- CONTENT -->
+<main class="content" role="main">
+
+  <section>
+    <h2>1. Aceptación de los términos</h2>
+    <p>Al instalar o utilizar la extensión Calafi para Google Docs, aceptas quedar vinculado a estos Términos de Servicio. Si no estás de acuerdo con alguna de estas condiciones, no debes usar la extensión.</p>
+  </section>
+
+  <section>
+    <h2>2. Descripción del servicio</h2>
+    <p>Calafi es una extensión para Google Docs que utiliza inteligencia artificial para ayudar a los profesores a evaluar tareas escritas. La extensión analiza el texto del documento activo contra la rúbrica proporcionada por el usuario y genera una evaluación y retroalimentación sugerida.</p>
+  </section>
+
+  <section>
+    <h2>3. Carácter orientativo de las evaluaciones</h2>
+    <div class="warning-box">
+      <p>Las evaluaciones generadas por Calafi son <strong>sugerencias automáticas</strong> y no constituyen una calificación definitiva ni oficial.</p>
+    </div>
+    <p>Las evaluaciones, calificaciones y comentarios producidos por Calafi son orientativos y están destinados a <strong>apoyar el criterio del profesor</strong>, no a reemplazarlo. El educador es el único responsable de la calificación final que se asigne a cualquier trabajo o actividad académica.</p>
+    <p>El uso de Calafi no exime al profesor de revisar, validar y, en su caso, ajustar los resultados generados antes de comunicarlos a los alumnos o incorporarlos al registro académico oficial.</p>
+  </section>
+
+  <section>
+    <h2>4. Limitación de responsabilidad</h2>
+    <p>El desarrollador de Calafi <strong>no se responsabiliza</strong> de las decisiones académicas que se tomen basándose en los resultados generados por la extensión, incluyendo pero no limitado a:</p>
+    <ul>
+      <li>Calificaciones asignadas a alumnos.</li>
+      <li>Consecuencias académicas o disciplinarias derivadas del uso de dichas calificaciones.</li>
+      <li>Errores, imprecisiones u omisiones en la retroalimentación generada por la IA.</li>
+      <li>Interpretaciones erróneas de los criterios de evaluación.</li>
+    </ul>
+    <p>Calafi se proporciona "tal como está" y "según disponibilidad", sin garantías de ningún tipo, expresas o implícitas. No garantizamos la exactitud, integridad o idoneidad de las evaluaciones generadas para ningún propósito específico.</p>
+  </section>
+
+  <section>
+    <h2>5. Uso aceptable</h2>
+    <p>Te comprometes a usar Calafi únicamente para propósitos educativos legítimos. Queda prohibido:</p>
+    <ul>
+      <li>Usar la extensión para fines distintos a la evaluación educativa.</li>
+      <li>Intentar acceder, modificar o interferir con los sistemas subyacentes de la extensión.</li>
+      <li>Transmitir a través de la extensión información personal sensible de alumnos menores sin las autorizaciones correspondientes.</li>
+      <li>Utilizar la extensión de forma que infrinja las leyes aplicables o los derechos de terceros.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. Propiedad intelectual</h2>
+    <p>Todos los derechos sobre el código, diseño y marca de Calafi son propiedad del desarrollador. El uso de la extensión no te otorga ningún derecho de propiedad intelectual sobre la misma ni sobre sus componentes.</p>
+  </section>
+
+  <section>
+    <h2>7. Disponibilidad del servicio</h2>
+    <div class="info-box">
+      <p>Calafi depende de servicios de terceros (Google Docs y OpenAI). Pueden producirse interrupciones fuera de nuestro control.</p>
+    </div>
+    <p>No garantizamos que el servicio esté disponible de forma ininterrumpida. Nos reservamos el derecho de modificar, suspender o discontinuar la extensión en cualquier momento, con o sin previo aviso.</p>
+  </section>
+
+  <section>
+    <h2>8. Modificaciones a los términos</h2>
+    <p>Podemos actualizar estos términos periódicamente. Te notificaremos de cambios sustanciales. El uso continuado de Calafi tras la publicación de los cambios implica tu aceptación de los nuevos términos.</p>
+  </section>
+
+  <section>
+    <h2>9. Contacto</h2>
+    <p>Para cualquier pregunta relacionada con estos términos, puedes escribirnos a: <a href="mailto:Gaelsho10@gmail.com">Gaelsho10@gmail.com</a></p>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Calafi. Todos los derechos reservados.</p>
+  <nav class="footer-links" aria-label="Pie de página">
+    <a href="index.html">Inicio</a>
+    <a href="privacidad.html">Política de privacidad</a>
+  </nav>
+</footer>
+
+</body>
+</html>
